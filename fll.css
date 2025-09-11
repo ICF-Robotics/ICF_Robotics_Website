@@ -1,0 +1,124 @@
+/* fll.css - FLL Page Styles */
+
+/* Colors and General Reset */
+:root {
+    --primary-green: #124838;
+    --white: #ffffff;
+    --accent: #f4f4f4;
+    --dark-gray: #333;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--accent);
+    color: var(--dark-gray);
+    line-height: 1.6;
+  }
+  
+  /* Header / Navbar */
+  header {
+    background: var(--primary-green);
+    color: var(--white);
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+  
+  nav {
+    margin-top: 0.5rem;
+  }
+  
+  nav a {
+    color: var(--white);
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    color: #c5e1c5;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: var(--white);
+    border-bottom: 2px solid var(--primary-green);
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+    color: var(--primary-green);
+  }
+  
+  /* Achievements Section */
+  .achievements {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .achievements ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .achievements li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Gallery */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    background: var(--primary-green);
+    color: var(--white);
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+ 
+   /* donate button */
+   .donate-section {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  .donate-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ffcc00;
+    color: #124838;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  .donate-btn:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+  }
+    

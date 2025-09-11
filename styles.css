@@ -1,0 +1,165 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #124838;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  background-color: #124838;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin-top: 1rem;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #a3d9a5;
+}
+
+.hero {
+  min-height: 150vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.overlay-text {
+  margin-top: 1rem;
+}
+
+.overlay-text h2 {
+  font-size: 2rem;
+  color: #124838;
+  text-align: center;
+}
+
+.mission {
+  background-color: #f8f8f8;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.mission h2 {
+  margin-bottom: 1rem;
+}
+
+.call-to-action {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.buttons .btn {
+  display: inline-block;
+  background-color: #124838;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.buttons .btn:hover {
+  background-color: #0e3a2e;
+}
+
+.page-banner {
+  background-color: #124838;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.content {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+footer {
+  background-color: #124838;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.carousel {
+  position: relative;
+  max-width: 800px;
+  height: auto;
+  overflow: hidden;
+  margin: 3rem auto;
+}
+
+ /* donate button */
+ .donate-section {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.donate-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ffcc00;
+  color: #124838;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.donate-btn:hover {
+  background-color: #e6b800;
+  transform: scale(1.05);
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICF Robotics</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: white;
+    }
+
+    .carousel {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      aspect-ratio: 1 / 1; /* Makes it a square */
+      overflow: hidden;
+      margin: 3rem auto;
+    }
+
+    .carousel-images {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      height: 100%;
+    }
+
+    .carousel-slide {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: 1000%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .caption {
+      margin-top: 0.5rem;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      text-align: center;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .carousel-buttons button {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+
+    .hero {
+      position: relative;
+      z-index: 1;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>ICF Robotics</h1>
+      <p class="tagline">Code it, build it, hype it — there’s a spot for you.</p>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="fll.html">FLL</a></li>
+          <li><a href="ftc.html">FTC</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="mission">
+      <h2>Our Mission</h2>
+      <p>
+        ICF Robotics is a values-driven robotics initiative dedicated to nurturing innovation, curiosity,
+        and ethical engineering in youth from all backgrounds. Inspired by the Islamic principles of
+        knowledge, integrity, and community benefit, we build inclusive spaces where diverse minds come
+        together to create technology with purpose. We believe robotics can be a tool not just for
+        competition, but for compassion, growth, and service to humanity.
+      </p>
+    </section>
+    <section class="hero">
+      <div class="carousel">
+        <div class="carousel-images" id="carouselImages">
+          <div class="carousel-slide">
+            <img src="images/IMG_1125.png" alt="Slide 1">
+            <div class="caption">The Deltas</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/IMG_3384.png" alt="Slide 2">
+            <div class="caption">FLL team winning an award</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/IMG_3464.png" alt="Slide 3">
+            <div class="caption">Another FLL team</div>
+          </div>
+          <div class="carousel-slide">
+           <img src="images/IMG_3762.png" alt="Slide 4">
+           <div class="caption">Full FLL team</div>
+        </div>
+        </div>
+        <div class="carousel-buttons">
+          <button onclick="moveSlide(-1)">&#10094;</button>
+          <button onclick="moveSlide(1)">&#10095;</button>
+        </div>
+      </div>
+      <div class="overlay-text">
+        <h2>Innovate with Intention</h2>
+        <p>Empowering youth through purpose-driven robotics and community.</p>
+      </div>
+
+      <div class="donate-section">
+        <a href="https://payments.madinaapps.com/friscomasjid/35890d93-8720-4092-877a-f26971a3aa9b" target="_blank" class="donate-btn">Donate</a>
+      </div>
+
+    </section>
+
+    <section class="call-to-action">
+      <h2>Explore Our Teams</h2>
+      <div class="buttons">
+        <a class="btn" href="fll.html">FLL Team</a>
+        <a class="btn" href="ftc.html">FTC Team</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 ICF Robotics | Chapter of ITKAN Robotics</p>
+    </div>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    function moveSlide(step) {
+      const carousel = document.getElementById('carouselImages');
+      const totalSlides = carousel.children.length;
+      currentSlide = (currentSlide + step + totalSlides) % totalSlides;
+      carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+  </script>
+</body>
+</html>
